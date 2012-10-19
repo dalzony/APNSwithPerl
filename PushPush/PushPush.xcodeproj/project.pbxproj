@@ -1,0 +1,298 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F107D33F16294C9300FA2549 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F107D33E16294C9300FA2549 /* UIKit.framework */; };
+		F107D34116294C9300FA2549 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F107D34016294C9300FA2549 /* Foundation.framework */; };
+		F107D34316294C9300FA2549 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F107D34216294C9300FA2549 /* CoreGraphics.framework */; };
+		F107D34916294C9300FA2549 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F107D34716294C9300FA2549 /* InfoPlist.strings */; };
+		F107D34B16294C9300FA2549 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F107D34A16294C9300FA2549 /* main.m */; };
+		F107D34F16294C9300FA2549 /* PushNotiAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F107D34E16294C9300FA2549 /* PushNotiAppDelegate.m */; };
+		F107D35116294C9300FA2549 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F107D35016294C9300FA2549 /* Default.png */; };
+		F107D35316294C9300FA2549 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F107D35216294C9300FA2549 /* Default@2x.png */; };
+		F107D35516294C9300FA2549 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F107D35416294C9300FA2549 /* Default-568h@2x.png */; };
+		F107D35E1629B0EF00FA2549 /* NotiListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F107D35C1629B0EF00FA2549 /* NotiListViewController.m */; };
+		F107D35F1629B0EF00FA2549 /* NotiListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F107D35D1629B0EF00FA2549 /* NotiListViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F107D33A16294C9300FA2549 /* pushpush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pushpush.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F107D33E16294C9300FA2549 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F107D34016294C9300FA2549 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F107D34216294C9300FA2549 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F107D34616294C9300FA2549 /* PushPush-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PushPush-Info.plist"; sourceTree = "<group>"; };
+		F107D34816294C9300FA2549 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F107D34A16294C9300FA2549 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F107D34C16294C9300FA2549 /* PushPush-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PushPush-Prefix.pch"; sourceTree = "<group>"; };
+		F107D34D16294C9300FA2549 /* PushNotiAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushNotiAppDelegate.h; sourceTree = "<group>"; };
+		F107D34E16294C9300FA2549 /* PushNotiAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushNotiAppDelegate.m; sourceTree = "<group>"; };
+		F107D35016294C9300FA2549 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		F107D35216294C9300FA2549 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		F107D35416294C9300FA2549 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F107D35B1629B0EF00FA2549 /* NotiListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotiListViewController.h; sourceTree = "<group>"; };
+		F107D35C1629B0EF00FA2549 /* NotiListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotiListViewController.m; sourceTree = "<group>"; };
+		F107D35D1629B0EF00FA2549 /* NotiListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotiListViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F107D33716294C9300FA2549 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F107D33F16294C9300FA2549 /* UIKit.framework in Frameworks */,
+				F107D34116294C9300FA2549 /* Foundation.framework in Frameworks */,
+				F107D34316294C9300FA2549 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F107D32F16294C9300FA2549 = {
+			isa = PBXGroup;
+			children = (
+				F107D35B1629B0EF00FA2549 /* NotiListViewController.h */,
+				F107D35C1629B0EF00FA2549 /* NotiListViewController.m */,
+				F107D35D1629B0EF00FA2549 /* NotiListViewController.xib */,
+				F107D34416294C9300FA2549 /* PushPush */,
+				F107D33D16294C9300FA2549 /* Frameworks */,
+				F107D33B16294C9300FA2549 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F107D33B16294C9300FA2549 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F107D33A16294C9300FA2549 /* pushpush.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F107D33D16294C9300FA2549 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F107D33E16294C9300FA2549 /* UIKit.framework */,
+				F107D34016294C9300FA2549 /* Foundation.framework */,
+				F107D34216294C9300FA2549 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F107D34416294C9300FA2549 /* PushPush */ = {
+			isa = PBXGroup;
+			children = (
+				F107D34D16294C9300FA2549 /* PushNotiAppDelegate.h */,
+				F107D34E16294C9300FA2549 /* PushNotiAppDelegate.m */,
+				F107D34516294C9300FA2549 /* Supporting Files */,
+			);
+			path = PushPush;
+			sourceTree = "<group>";
+		};
+		F107D34516294C9300FA2549 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F107D34616294C9300FA2549 /* PushPush-Info.plist */,
+				F107D34716294C9300FA2549 /* InfoPlist.strings */,
+				F107D34A16294C9300FA2549 /* main.m */,
+				F107D34C16294C9300FA2549 /* PushPush-Prefix.pch */,
+				F107D35016294C9300FA2549 /* Default.png */,
+				F107D35216294C9300FA2549 /* Default@2x.png */,
+				F107D35416294C9300FA2549 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F107D33916294C9300FA2549 /* PushPush */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F107D35816294C9400FA2549 /* Build configuration list for PBXNativeTarget "PushPush" */;
+			buildPhases = (
+				F107D33616294C9300FA2549 /* Sources */,
+				F107D33716294C9300FA2549 /* Frameworks */,
+				F107D33816294C9300FA2549 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PushPush;
+			productName = PushPush;
+			productReference = F107D33A16294C9300FA2549 /* pushpush.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F107D33116294C9300FA2549 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PushNoti;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = Mintegrals;
+			};
+			buildConfigurationList = F107D33416294C9300FA2549 /* Build configuration list for PBXProject "PushPush" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F107D32F16294C9300FA2549;
+			productRefGroup = F107D33B16294C9300FA2549 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F107D33916294C9300FA2549 /* PushPush */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F107D33816294C9300FA2549 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F107D34916294C9300FA2549 /* InfoPlist.strings in Resources */,
+				F107D35116294C9300FA2549 /* Default.png in Resources */,
+				F107D35316294C9300FA2549 /* Default@2x.png in Resources */,
+				F107D35516294C9300FA2549 /* Default-568h@2x.png in Resources */,
+				F107D35F1629B0EF00FA2549 /* NotiListViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F107D33616294C9300FA2549 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F107D34B16294C9300FA2549 /* main.m in Sources */,
+				F107D34F16294C9300FA2549 /* PushNotiAppDelegate.m in Sources */,
+				F107D35E1629B0EF00FA2549 /* NotiListViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F107D34716294C9300FA2549 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F107D34816294C9300FA2549 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F107D35616294C9300FA2549 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Heejong Park (WZNKAJ2XXN)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PROVISIONING_PROFILE = "CE3DBD34-0CDB-414E-8591-EE99A08FEB93";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F107D35716294C9300FA2549 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Heejong Park (WZNKAJ2XXN)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "3EA399DD-82B2-4771-8309-419293014B65";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F107D35916294C9400FA2549 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PushPush/PushPush-Prefix.pch";
+				INFOPLIST_FILE = "PushPush/PushPush-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = pushpush;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F107D35A16294C9400FA2549 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PushPush/PushPush-Prefix.pch";
+				INFOPLIST_FILE = "PushPush/PushPush-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = pushpush;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F107D33416294C9300FA2549 /* Build configuration list for PBXProject "PushPush" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F107D35616294C9300FA2549 /* Debug */,
+				F107D35716294C9300FA2549 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F107D35816294C9400FA2549 /* Build configuration list for PBXNativeTarget "PushPush" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F107D35916294C9400FA2549 /* Debug */,
+				F107D35A16294C9400FA2549 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F107D33116294C9300FA2549 /* Project object */;
+}
