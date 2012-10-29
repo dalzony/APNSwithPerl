@@ -10,6 +10,7 @@
 
 @implementation PushNotiAppDelegate
 @synthesize viewController;
+@synthesize pushList;
 
 - (void)dealloc
 {
@@ -22,9 +23,14 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    self.viewController = [[[NotiListViewController alloc]initWithNibName:@"NotiListViewController" bundle:nil] autorelease];
+    pushList = [[NSUserDefaults standardUserDefaults] objectForKey:@"push_list"];
+    if ( !pushList )
+        pushList = [[NSMutableArray alloc] init];
+    self.viewController = [[[PushListViewController alloc]initWithNibName:@"PushListViewController" bundle:nil] autorelease];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 
@@ -61,6 +67,7 @@
     //설정 관련
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
     //배지 개수 재설정
+    //확인했는지에 따라 숫자 조절
     application.applicationIconBadgeNumber = 0;
     NSLog(@"성공인가? ");
     
@@ -69,12 +76,7 @@
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     //토큰을 서버로 전송
-    NSMutableString *deviceId = [NSMutableString string];
-    const unsigned char* ptr = (const unsigned char*) [deviceToken bytes];
-    for(int i = 0 ; i < 32 ; i++) {
-        [deviceId appendFormat:@"%02x", ptr[i]];
-    }
-    NSLog(@"APNS Device Token : %@", deviceId);
+    NSLog(@"APNS Device Token : %@", [deviceToken description]);
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
@@ -84,16 +86,36 @@
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
     //다른일 수행중일떄 받을 수 있음
+    
     NSDictionary *aps = [userInfo valueForKey:@"aps"];
-    NSString *msg = [NSString stringWithFormat:@"%@", [aps objectForKey:@"alert"]];
-	NSLog(@"PUSH 메세지 : %@", msg);
-    UIAlertView *pushAlert = [[UIAlertView alloc] initWithTitle:@"알 림"
-                                                        message:msg
-                                                       delegate:nil
-                                              cancelButtonTitle:@"O K"
-                                              otherButtonTitles:nil];
+    NSString *subject = [NSString stringWithFormat:@"%@", [aps objectForKey:@"alert"]];
+    NSDictionary *link = [userInfo valueForKey:@"link"];
+    NSDictionary* listDict = [NSDictionary dictionaryWithObjectsAndKeys:subject,@"subject",link,@"link", nil];
+    [pushList addObject:listDict];
+    NSLog(@"%@",listDict);  
+    UIAlertView *pushAlert = [[UIAlertView alloc] initWithTitle:@"클량 실시간 베스트"
+                                                        message:subject
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancle"
+                                              otherButtonTitles:@"Open", nil];
     [pushAlert show];
     [pushAlert release];
+    [[NSUserDefaults standardUserDefaults] setObject:pushList forKey:@"push_list"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+# pragma mark UIAlert Delegate
+-(void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if(buttonIndex ==1){
+        NSString *link;
+        for (int ii=0; ii<[pushList count]; ii++) {
+            NSString *subject = [[pushList objectAtIndex:ii] objectForKey:@"subject"];
+            if ([[alertView message] isEqualToString:subject]) {
+                link = [[pushList objectAtIndex:ii] objectForKey:@"link"];
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:link]];
+            }
+        }
+    }
 }
 
 @end

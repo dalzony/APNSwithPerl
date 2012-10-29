@@ -16,8 +16,8 @@
 		F107D35116294C9300FA2549 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F107D35016294C9300FA2549 /* Default.png */; };
 		F107D35316294C9300FA2549 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F107D35216294C9300FA2549 /* Default@2x.png */; };
 		F107D35516294C9300FA2549 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F107D35416294C9300FA2549 /* Default-568h@2x.png */; };
-		F107D35E1629B0EF00FA2549 /* NotiListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F107D35C1629B0EF00FA2549 /* NotiListViewController.m */; };
-		F107D35F1629B0EF00FA2549 /* NotiListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F107D35D1629B0EF00FA2549 /* NotiListViewController.xib */; };
+		F18329D51631D0B200AC65E1 /* PushListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F18329D31631D0B200AC65E1 /* PushListViewController.m */; };
+		F18329D61631D0B200AC65E1 /* PushListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F18329D41631D0B200AC65E1 /* PushListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,9 +34,9 @@
 		F107D35016294C9300FA2549 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		F107D35216294C9300FA2549 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		F107D35416294C9300FA2549 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		F107D35B1629B0EF00FA2549 /* NotiListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotiListViewController.h; sourceTree = "<group>"; };
-		F107D35C1629B0EF00FA2549 /* NotiListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotiListViewController.m; sourceTree = "<group>"; };
-		F107D35D1629B0EF00FA2549 /* NotiListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotiListViewController.xib; sourceTree = "<group>"; };
+		F18329D21631D0B200AC65E1 /* PushListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushListViewController.h; sourceTree = "<group>"; };
+		F18329D31631D0B200AC65E1 /* PushListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushListViewController.m; sourceTree = "<group>"; };
+		F18329D41631D0B200AC65E1 /* PushListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PushListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +56,6 @@
 		F107D32F16294C9300FA2549 = {
 			isa = PBXGroup;
 			children = (
-				F107D35B1629B0EF00FA2549 /* NotiListViewController.h */,
-				F107D35C1629B0EF00FA2549 /* NotiListViewController.m */,
-				F107D35D1629B0EF00FA2549 /* NotiListViewController.xib */,
 				F107D34416294C9300FA2549 /* PushPush */,
 				F107D33D16294C9300FA2549 /* Frameworks */,
 				F107D33B16294C9300FA2549 /* Products */,
@@ -89,6 +86,9 @@
 				F107D34D16294C9300FA2549 /* PushNotiAppDelegate.h */,
 				F107D34E16294C9300FA2549 /* PushNotiAppDelegate.m */,
 				F107D34516294C9300FA2549 /* Supporting Files */,
+				F18329D21631D0B200AC65E1 /* PushListViewController.h */,
+				F18329D31631D0B200AC65E1 /* PushListViewController.m */,
+				F18329D41631D0B200AC65E1 /* PushListViewController.xib */,
 			);
 			path = PushPush;
 			sourceTree = "<group>";
@@ -163,7 +163,7 @@
 				F107D35116294C9300FA2549 /* Default.png in Resources */,
 				F107D35316294C9300FA2549 /* Default@2x.png in Resources */,
 				F107D35516294C9300FA2549 /* Default-568h@2x.png in Resources */,
-				F107D35F1629B0EF00FA2549 /* NotiListViewController.xib in Resources */,
+				F18329D61631D0B200AC65E1 /* PushListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +176,7 @@
 			files = (
 				F107D34B16294C9300FA2549 /* main.m in Sources */,
 				F107D34F16294C9300FA2549 /* PushNotiAppDelegate.m in Sources */,
-				F107D35E1629B0EF00FA2549 /* NotiListViewController.m in Sources */,
+				F18329D51631D0B200AC65E1 /* PushListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,11 +2,9 @@
 
 use strict;
 use warnings;
-
-
 use Net::APNS::Persistent;
 
-my $devicetoken_hex = '3b41673576f65b10e977fca7267d3113330b5640d44e77beddfa1e1120dc09d0';
+my $devicetoken_hex = '';
 
 my $apns = Net::APNS::Persistent->new({
   sandbox => 1,

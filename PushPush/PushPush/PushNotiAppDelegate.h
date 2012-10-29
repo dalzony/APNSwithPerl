@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NotiListViewController.h"
+#import "PushListViewController.h"
 
-@interface PushNotiAppDelegate : UIResponder <UIApplicationDelegate>
+@interface PushNotiAppDelegate : UIResponder <UIApplicationDelegate, UIAlertViewDelegate> {
+    NSMutableArray* pushList;
+}
 
 @property (strong, nonatomic) UIWindow *window;
-@property (nonatomic, retain) NotiListViewController* viewController;
+@property (nonatomic, retain) PushListViewController* viewController;
+@property (nonatomic, assign) NSMutableArray* pushList;
 
 @end

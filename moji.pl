@@ -7,10 +7,21 @@ use 5.010;
 use Mojo::UserAgent;
 use Data::Dumper;
 
+use Net::APNS::Persistent;
+
+my $devicetoken_hex = '11111111111111111';
+
+my $apns = Net::APNS::Persistent->new({
+  sandbox => 1,
+  cert    => 'push.cer',
+  key     => 'push.key',
+  passwd  => '12345',
+});
+
 my $ua = Mojo::UserAgent->new;
 my %feeds;
 my %pushed;
-my $hot = 10;
+my $hot = 500;
 $| = 1;
 
 while(1) {
@@ -19,6 +30,19 @@ while(1) {
 		if(!defined $pushed{$id} && $v->{hit} > $hot) {
 			say "PUSH :: ", $id, Dumper($v);
 			$pushed{$id} = 1;
+			$apns->queue_notification(
+		  	$devicetoken_hex,
+  			{
+    			aps => {
+        			alert => $v->{subject},
+        			sound => 'default',
+        			badge => 1,
+    			},
+				link => $v->{a},
+ 	 		});
+
+			$apns->send_queue;
+			$apns->disconnect;
 		}
 		elsif(defined $pushed{$id}) {
 			#say "Already PUSHed :: ", $id, Dumper($v);
@@ -49,6 +73,7 @@ sub update {
 		$e = $td[1]->at('a');
 		#say "A element is $e";
 		$a = $e->attrs('href');
+		$a =~ s/../http:\/\/clien.career.co.kr\/cs2/;
 		$subject = $e->text;
 
 
